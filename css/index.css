@@ -8,6 +8,11 @@ body {
   }
 }
 
+#about {
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
 .card {
   height: 100%;
 }
