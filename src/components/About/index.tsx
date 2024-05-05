@@ -24,7 +24,7 @@ export default function About() {
         <div className="grid grid-cols-12 gap-4">
           <div className="col-span-12 lg:col-span-3">
             <Image
-              src={aboutConfig.personalPhoto}
+              src={aboutConfig?.personalPhoto || '#'}
               alt="Personal Photo"
               className="object-cover w-full h-full"
               height={1920}
@@ -42,30 +42,37 @@ export default function About() {
                     <>
                       <div className="flex space-x-2">
                         <FaCaretRight></FaCaretRight>
-                        <div>{aboutConfig.personalName}</div>
-                        {Object.keys(aboutConfig.socials).map((social) => (
-                          <a
-                            className="hover:text-black"
-                            href={aboutConfig.socials[social]}
-                            target="_blank"
-                            key={`social-${social}`}
-                          >
-                            {social === 'linkedin' && <FaLinkedinIn />}
-                            {social === 'github' && <FaGithub />}
-                          </a>
-                        ))}
+                        <div>{aboutConfig?.personalName}</div>
+                        {Object.keys(aboutConfig?.socials || {}).map(
+                          (social) => (
+                            <a
+                              className="hover:text-black"
+                              href={
+                                (aboutConfig?.socials || {})[
+                                  social as
+                                    | keyof { linkedin: string; github: string }
+                                ]
+                              }
+                              target="_blank"
+                              key={`social-${social}`}
+                            >
+                              {social === 'linkedin' && <FaLinkedinIn />}
+                              {social === 'github' && <FaGithub />}
+                            </a>
+                          )
+                        )}
                       </div>
                       <div className="flex space-x-2">
                         <FaBirthdayCake></FaBirthdayCake>
-                        <div>{aboutConfig.birthday}</div>
+                        <div>{aboutConfig?.birthday}</div>
                       </div>
                       <div className="flex space-x-2">
                         <FaMapMarker></FaMapMarker>
-                        <div>{aboutConfig.address}</div>
+                        <div>{aboutConfig?.address}</div>
                       </div>
                     </>,
                     <>
-                      {aboutConfig.emails.map((email, index) => (
+                      {(aboutConfig?.emails || []).map((email, index) => (
                         <div className="flex space-x-2" key={`email-${index}`}>
                           <FaEnvelope></FaEnvelope>
                           <a
@@ -78,7 +85,7 @@ export default function About() {
                       ))}
                     </>,
                     <>
-                      {aboutConfig.roles.map((role, index) => (
+                      {(aboutConfig?.roles || []).map((role, index) => (
                         <div className="flex space-x-2" key={`role-${index}`}>
                           <FaBriefcase></FaBriefcase>
                           <div>{role}</div>
@@ -89,9 +96,9 @@ export default function About() {
                       <FaUniversity></FaUniversity>
                       <a
                         className="hover:text-black"
-                        href={aboutConfig.education.link}
+                        href={aboutConfig?.education?.link}
                       >
-                        {aboutConfig.education.name}
+                        {aboutConfig?.education?.name}
                       </a>
                     </div>,
                   ]}
@@ -100,7 +107,7 @@ export default function About() {
               right={
                 <TextBox
                   title="About Me"
-                  content={aboutConfig.content}
+                  content={[<>{aboutConfig?.content}</>]}
                 ></TextBox>
               }
             ></Section>
