@@ -38,7 +38,7 @@ jobs:
         run: npm ci
 
       - name: Build my App
-        run: npm run build && touch ./out/.nojekyll
+        run: npm run build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
@@ -46,4 +46,7 @@ jobs:
           path: ./out
 
       - name: Deploy 🚀
-        uses: actions/deploy-pages@v1
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          publish_dir: ./out
