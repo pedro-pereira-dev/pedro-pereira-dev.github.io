@@ -29,24 +29,14 @@ jobs:
         with:
           node-version: '18.x'
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v2
-        with:
-          static_site_generator: next
-
       - name: Installing my packages
         run: npm ci
 
       - name: Build my App
-        run: npm run build
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
-        with:
-          path: ./out
+        run: npm run build && npm run export && touch ./out/.nojekyll
 
       - name: Deploy 🚀
-        uses: peaceiris/actions-gh-pages@v3
+        uses: JamesIves/github-pages-deploy-action@4.4.0
         with:
-          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-          publish_dir: ./out
+          branch: public
+          folder: out
