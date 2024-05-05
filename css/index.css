@@ -1,23 +1,10 @@
 body {
   padding-top: 88.88px;
-	background-repeat: no-repeat;
-	
-	background: url(./../images/background.png) no-repeat center center fixed !important; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
 }
 
 @media (min-width: 992px) {
   body {
     padding-top: 88.88px;
-		
-		background: url(./../images/background.png) no-repeat center center fixed !important; 
-		-webkit-background-size: cover;
-		-moz-background-size: cover;
-		-o-background-size: cover;
-		background-size: cover;
   }
 }
 
