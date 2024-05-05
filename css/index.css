@@ -8,6 +8,18 @@ body {
   }
 }
 
+.clear-background {
+	background-color:white;
+}
+
+.fill-background {
+	background-image: url("/images/background.png");
+	height: 100%; 
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
 .card {
   height: 100%;
 }
