@@ -12,6 +12,19 @@ a {
 	margin-bottom: 15px;
 }
 
+#facebook:hover { color: #3b5998; }
+#twitter:hover { color: #1da1f2; }
+#instagram:hover { color: #cd486b; }
+#google-plus:hover { color: #db4437; }
+#linkedin:hover { color: #0077b5; }
+#github:hover { color: #333333; }
+#gitlab:hover { color: #fc6d26; }
+
 .card {
   height: 100%;
+}
+
+.social-media {
+    color: #010101;
+    transition: all 0.2s ease-out;
 }
