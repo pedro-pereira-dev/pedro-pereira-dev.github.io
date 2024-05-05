@@ -1,31 +1,25 @@
-import { BlockBox, BlockBoxHeader, Section, TextBox } from '../'
-import config from '../../config.json'
+import {
+  BlockBox,
+  BlockBoxHeader,
+  ConfigurationType,
+  Section,
+  SectionTabType,
+} from '../'
 
-const experienceConfig = config.tabs.find(
-  (tab) => tab.name.toLowerCase() === 'experience'
+import Configuration from '../../config.json'
+const config: ConfigurationType = Configuration
+
+const experienceConfig: SectionTabType = config.tabs.find(
+  (tab) => tab?.anchor === 'Experience'
 )
 
 export default function Experience() {
   return (
-    <div id="experience">
+    <div id={experienceConfig?.anchor || ''}>
       <BlockBox>
-        <BlockBoxHeader text="Experience"></BlockBoxHeader>
-        {experienceConfig.content.map((experience, index) => (
-          <Section
-            left={
-              <TextBox
-                title={experience.name}
-                content={experience.details}
-              ></TextBox>
-            }
-            right={
-              <TextBox
-                title={experience.role}
-                content={experience.description}
-              ></TextBox>
-            }
-            key={`experience-${index}`}
-          />
+        <BlockBoxHeader text={experienceConfig?.anchor || ''}></BlockBoxHeader>
+        {experienceConfig?.content?.map(({ left, right }, index) => (
+          <Section left={left} right={right} key={`experience-${index}`} />
         ))}
       </BlockBox>
     </div>

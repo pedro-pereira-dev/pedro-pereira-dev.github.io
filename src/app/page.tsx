@@ -1,11 +1,4 @@
-import {
-  About,
-  Education,
-  Experience,
-  Header,
-  Footer,
-  Projects,
-} from '@/components'
+import { Header, About, Experience, Education, Footer } from '@/components'
 
 export default function Home() {
   return (
@@ -14,7 +7,6 @@ export default function Home() {
       <About />
       <Experience />
       <Education />
-      <Projects />
       <Footer />
     </div>
   )

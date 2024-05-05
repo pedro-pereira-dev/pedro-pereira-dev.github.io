@@ -1,16 +1,15 @@
-export default function TextBox({
-  title,
-  content,
-}: {
+export interface TextBoxType {
   title: string
-  content: React.ReactNode[]
-}) {
+  text: string[]
+}
+
+export default function TextBox({ title, text }: TextBoxType) {
   return (
     <div className="w-full h-full">
       <div className="mb-2 text-black text-lg">{title}</div>
-      {content.map((text, key) => (
+      {text.map((_text, key) => (
         <div key={key} className="text-sm mb-2">
-          {text}
+          {_text}
         </div>
       ))}
     </div>

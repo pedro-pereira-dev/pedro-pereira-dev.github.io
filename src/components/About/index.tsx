@@ -10,21 +10,23 @@ import {
   FaGithub,
 } from 'react-icons/fa'
 
-import { BlockBox, Section, TextBox } from '../'
-import config from '../../config.json'
+import { BlockBox, ConfigurationType, Section, SectionTabType } from '../'
 
-const aboutConfig = config.tabs.find(
-  (tab) => tab.name.toLowerCase() === 'about'
+import Configuration from '../../config.json'
+const config: ConfigurationType = Configuration
+
+const aboutConfig: SectionTabType = config.tabs.find(
+  (tab) => tab?.anchor === 'About'
 )
 
 export default function About() {
   return (
-    <div id="about">
+    <div id={aboutConfig?.anchor || ''}>
       <BlockBox>
         <div className="grid grid-cols-12 gap-4">
           <div className="col-span-12 lg:col-span-3">
             <Image
-              src={aboutConfig?.personalPhoto || '#'}
+              src={config?.details?.personalPhoto || '#'}
               alt="Personal Photo"
               className="object-cover w-full h-full"
               height={1920}
@@ -34,45 +36,40 @@ export default function About() {
             />
           </div>
           <div className="col-span-12 lg:col-span-9">
-            <Section
-              left={
-                <TextBox
-                  title="Details"
-                  content={[
+            <div className="w-full pt-5 pb-5 grid grid-cols-12 gap-4 border-b border-neutral-400 lg:border-0">
+              <div className="col-span-12 lg:col-span-4">
+                <div className="w-full h-full">
+                  <div className="mb-2 text-black text-lg">Details</div>
+                  {[
                     <>
                       <div className="flex space-x-2">
                         <FaCaretRight></FaCaretRight>
-                        <div>{aboutConfig?.personalName}</div>
-                        {Object.keys(aboutConfig?.socials || {}).map(
-                          (social) => (
+                        <div>{config?.details?.personalName}</div>
+                        {config?.details?.socials
+                          .map((social) => social.split('||'))
+                          .map(([socialIcon, socialURL]) => (
                             <a
                               className="hover:text-black"
-                              href={
-                                (aboutConfig?.socials || {})[
-                                  social as
-                                    | keyof { linkedin: string; github: string }
-                                ]
-                              }
+                              href={socialURL}
                               target="_blank"
-                              key={`social-${social}`}
+                              key={`social-${socialIcon}`}
                             >
-                              {social === 'linkedin' && <FaLinkedinIn />}
-                              {social === 'github' && <FaGithub />}
+                              {socialIcon === 'linkedin' && <FaLinkedinIn />}
+                              {socialIcon === 'github' && <FaGithub />}
                             </a>
-                          )
-                        )}
+                          ))}
                       </div>
                       <div className="flex space-x-2">
                         <FaBirthdayCake></FaBirthdayCake>
-                        <div>{aboutConfig?.birthday}</div>
+                        <div>{config?.details?.birthday}</div>
                       </div>
                       <div className="flex space-x-2">
                         <FaMapMarker></FaMapMarker>
-                        <div>{aboutConfig?.address}</div>
+                        <div>{config?.details?.address}</div>
                       </div>
                     </>,
                     <>
-                      {(aboutConfig?.emails || []).map((email, index) => (
+                      {(config?.details?.emails || []).map((email, index) => (
                         <div className="flex space-x-2" key={`email-${index}`}>
                           <FaEnvelope></FaEnvelope>
                           <a
@@ -85,7 +82,7 @@ export default function About() {
                       ))}
                     </>,
                     <>
-                      {(aboutConfig?.roles || []).map((role, index) => (
+                      {(config?.details?.roles || []).map((role, index) => (
                         <div className="flex space-x-2" key={`role-${index}`}>
                           <FaBriefcase></FaBriefcase>
                           <div>{role}</div>
@@ -96,21 +93,22 @@ export default function About() {
                       <FaUniversity></FaUniversity>
                       <a
                         className="hover:text-black"
-                        href={aboutConfig?.education?.link}
+                        href={config?.details?.education.split('||')[1]}
                       >
-                        {aboutConfig?.education?.name}
+                        {config?.details?.education.split('||')[0]}
                       </a>
                     </div>,
-                  ]}
-                ></TextBox>
-              }
-              right={
-                <TextBox
-                  title="About Me"
-                  content={[<>{aboutConfig?.content}</>]}
-                ></TextBox>
-              }
-            ></Section>
+                  ].map((_text, key) => (
+                    <div key={key} className="text-sm mb-2">
+                      {_text}
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <div className="col-span-12 lg:col-span-8">
+                <Section left={aboutConfig?.content[0].left}></Section>
+              </div>
+            </div>
           </div>
         </div>
       </BlockBox>
