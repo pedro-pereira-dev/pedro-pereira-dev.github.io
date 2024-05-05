@@ -25,6 +25,8 @@ a {
   height: 100%;
 }
 
-#education {
+#education,
+#experience,
+#footer-elem {
 	margin-top: 30px;
 }
