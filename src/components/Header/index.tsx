@@ -2,7 +2,7 @@ export default function Header() {
   return (
     <nav className="sticky top-0 z-10 w-full flex justify-center p-5 bg-white bg-opacity-80">
       <div className="w-full max-w-5xl">
-        <a href="/" className="font-bold text-lg hover:text-black">
+        <a href="/" className="font-bold text-lg text-black">
           Pedro Pereira
         </a>
         <div className="flex flex-wrap space-x-10">
@@ -14,6 +14,9 @@ export default function Header() {
           </a>
           <a href="#education" className="hover:text-black">
             Education
+          </a>
+          <a href="#projects" className="hover:text-black">
+            Projects
           </a>
         </div>
       </div>
