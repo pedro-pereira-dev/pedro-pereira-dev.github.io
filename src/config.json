@@ -21,7 +21,9 @@
           "left": {
             "title": "About Me",
             "text": [
-              "I am currently working as a lead developer in Ecommerce of a software team and getting some experience as a solution architect for multiple projects. Since I love to solve complex problems in the most efficient ways, my favorite areas to work in the field of computer science areparallel computingandmachine learning. This website was created to show you my academic and professional achievements, as well as what I am looking to accomplish in my future."
+              "I'm a motivated professional with a master's in CS, specializing in parallel computing and optimization. With 7+ years as a hands-on full stack developer, I've worked in ecommerce, media, and led remote international teams.",
+              "My leadership style values open communication, collaboration, and diverse perspectives. I take pride in quick thinking, independent problem-solving, and thorough development. Exploring new technologies keeps me excited, as continuous learning is key.",
+              "Challenges are chances for growth: I've built systems from scratch and provided architectural solutions. My journey is defined by improvement, hunger for knowledge, and a genuine tech enthusiasm."
             ]
           }
         }
@@ -36,10 +38,11 @@
             "text": ["July 2019 - Present", "Porto, Porto"]
           },
           "right": {
-            "title": "Full Time - Lead Software Developer",
+            "title": "Full Time - Lead Software Developer | Solutions Architect",
             "text": [
-              "I am leading an Ecommerce team and providing technical consulting to major international brands.",
-              "My responsibilities are managing team members, designing technical solutions, provide technical support and develop in the whole scope of the programming stack - from low level environment scripting to front-end development."
+              "In my journey of full-stack development, I've left a significant impact on renowned companies. I've led multiple projects as a technical lead, ensuring seamless development cycles. My expertise extended to legacy systems using Oracle's ecommerce tools, where I provided vital technical support. Additionally, I designed an in-house integrator that effectively connected various system points within clients' solutions, enhancing overall efficiency.",
+              "A notable achievement was architecting an application that extracted enriched insights from clients' systems, proactively preventing anomalies in Points of Sale (PoS). My commitment to knowledge sharing led me to mentor junior developers, fostering their growth. Simultaneously, I managed infrastructure and introduced standardized processes that streamlined workflows.",
+              "As part of technical support, I maintained back-office applications utilizing Java with Spring framework on Azure. On the front-office, I employed Oracle Commerce Cloud, Knockout.js, JavaScript, Node.js, and React.js. Innovation thrived as I designed applications with microservices architecture, integrating InfluxDB, Nginx, Kafka, Telegraf, Node.js, and React.js."
             ]
           }
         },
@@ -51,23 +54,9 @@
           "right": {
             "title": "Full Time - Software Developer",
             "text": [
-              "When I started working at MOG Technologies I had been part of several different projects from low level software development, to web development, and data science.",
-              "The first project I was involved with was a low level software development project which allowed me to work with parallel computing and its goal was to implement performance optimization techniques to multiple video manipulation operations.",
-              "I was also responsible for the development of a front-end application that linked to a service created by a team of developers to allow them to easily test their work and to have a fully operational demonstrational project."
-            ]
-          }
-        },
-        {
-          "left": {
-            "title": "CGI Porto.",
-            "text": ["February 2017 - June 2017", "Porto, Porto"]
-          },
-          "right": {
-            "title": "Project Member - DevOps and Full Stack Web Developer",
-            "text": [
-              "This six person project consisted in a web management tool and a back-office implemented as a Service-Oriented Architecture (SOA). The tool compiles information from multiple sensors and other different entities to find correlation between data and find useful patterns to the final users in order to ease off their work.",
-              "The sensors data is fetched and processed by multiple docker containers that make up individual modules of the system. After processing the information, it is provided through an API to a front-end application that displays it in a simpler visual format.",
-              "The relevant technologies to this project were Python, R, NodeJS, ReactJS and Docker."
+              "Engaged in the domain of full-stack development, my journey began with a unique low-level programming endeavor. This project harnessed the potent processing capabilities of GPUs for video post-processing. I employed C++ and CUDA to craft a solution deployed on Linux systems, accessible as a SaaS. This venture showcased my ability to optimize resource utilization and deliver innovative solutions.",
+              "My subsequent project shifted focus to web development. In this venture, I orchestrated a full-stack solution for a Content Management System (CMS) tailored to media content distribution over the internet. The backend, a creation in Node.js, seamlessly interacted with the frontend built using React.js. Orchestrating the interplay of multiple microservices, I employed Kubernetes and Docker, taking advantage of Azure's capabilities.",
+              "Both projects underscored my adaptability across domains, from leveraging low-level programming and GPU processing to orchestrating modern web architectures with cutting-edge technologies."
             ]
           }
         },
@@ -79,8 +68,23 @@
           "right": {
             "title": "Project Member - Software Architect",
             "text": [
-              "The goal of this two person project was to develop a Software Requirements Specification document for a private back-office system resorting to several methods of requirements elicitation in order to obtain all of the system's features and main business logic.",
-              "The relevant skills to this project were Unified Modeling Language (UML) and Goal Oriented Requirements Language (GRL)."
+              "In the realm of software architecture, our task involved revitalizing a legacy back-office system through a project that encompassed requirements gathering, systematic system design, and comprehensive documentation. The focal point was a back-office system dedicated to JavaScript code obfuscation and minification, which had become burdened by operational challenges and security vulnerabilities. We embarked on a meticulous journey, starting with gathering requirements, engaging stakeholders to comprehend system intricacies, and then proceeding to a system design phase that aimed to modernize architecture while preserving core functionalities.",
+              "At the core of our approach was a commitment to robust documentation, encompassing decisions, architectural shifts, and design rationale. This comprehensive endeavor not only breathed new life into the aging system but also highlighted the potential of strategic software architecture to bolster functionality and endurance."
+            ]
+          }
+        },
+        {
+          "left": {
+            "title": "CGI Porto.",
+            "text": ["February 2017 - June 2017", "Porto, Porto"]
+          },
+          "right": {
+            "title": "Project Member - DevOps and Full Stack Web Developer",
+            "text": [
+              "In the context of the Internet of Things (IoT), a team of six members undertook a significant initiative. We initiated the project from its inception, constructing a comprehensive system to aggregate data from sensors dispersed throughout the city of Porto.",
+              "However, our focus extended beyond raw data. We meticulously identified patterns within the data, which served as valuable indicators. These patterns played a crucial role in anomaly detection, enabling us to promptly notify users in case of irregularities.",
+              "Underlying this operational framework was the deployment of Docker, a platform that facilitated seamless coordination between system components. The backend operations were driven by the Node.js environment, valued for its efficiency and adaptability. Concurrently, the frontend, serving as the user interface, was developed using React.js, effectively transforming intricate data into coherent visualizations.",
+              "The essence of our venture within the IoT domain transcended technological aspects. It was a collective endeavor, involving the amalgamation of diverse skills from our six-member team. The project seamlessly converged real-world data from Porto's urban landscape with sophisticated monitoring techniques, thereby achieving a pivotal milestone within the realm of IoT innovation."
             ]
           }
         }
@@ -97,8 +101,8 @@
           "right": {
             "title": "Integrated Master’s (BsC + MsC) - Informatics and Computing Engineering (Specialization: Parallel Computing)",
             "text": [
-              "This course allowed me to study multiple fields of computer engineering such as computer architecture, web and mobile development, networks and security, project management, software engineering and artificial intelligence.",
-              "My Master's thesis is titled Heterogeneous Computing Approach for High performance Video Resampling and Resizing. The goal of the developed project was to optimize the resampling phase of video post-production operations using NVidia's graphic processing units. The result of this thesis sped up the operation in 48% to 57% in comparison to the most popular free to use tool used to the same effect: FFmpeg."
+              "My computer science master's covered an array of essential domains. From computer and software architecture, web development, to robust software design. I gained proficiency in networks, security, and the complexities of safeguarding data. The program also delved into data science and machine learning, equipping me to glean insights and build intelligent solutions from data. This diverse expertise positions me strongly for versatile roles in tech.",
+              "Titled \"Heterogeneous Computing Approach for High-Performance Video Resampling and Resizing,\" my Master's thesis aimed to enhance video post-production processes. By harnessing the power of NVidia's graphic processing units, the focus was on optimizing the resampling phase. The outcome was remarkable: a 48% to 57% acceleration in operation speed compared to FFmpeg, a widely used free tool for the same purpose. This achievement underscores the potential of leveraging heterogeneous computing for efficient video processing."
             ]
           }
         }
